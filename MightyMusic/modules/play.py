@@ -533,7 +533,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
-                    InlineKeyboardButton(text="Update", url=f"https://t.me/Indoinfobot"),
+                    InlineKeyboardButton(text="Update", url=f"https://t.me/infobotmusik"),
                     InlineKeyboardButton(text="Tutup", callback_data="cls")
                 ],
             ]
@@ -577,7 +577,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
-                    InlineKeyboardButton(text="Update", url=f"https://t.me/Indoinfobot"),
+                    InlineKeyboardButton(text="Update", url=f"https://t.me/infobotmusik"),
                     InlineKeyboardButton(text="Tutup", callback_data="cls")
                 ],
             ]
