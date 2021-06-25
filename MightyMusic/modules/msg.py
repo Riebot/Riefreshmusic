@@ -11,7 +11,7 @@ f"""
 
 ⚪️ Nama Asisten >> @{ASSISTANT_NAME}\n\nKlik tombol dibawah untuk melihat intruksi lain**
 ◎› Owner Bot >> @{OWNER_USERNAME}
-◎› Owner Project >> @ZendYNS
+◎› Owner Project >> @SilenceSpe4ks
 """,
 
 f"""
