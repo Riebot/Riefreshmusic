@@ -23,7 +23,7 @@ def _start(client, message):
                     InlineKeyboardButton(
                         "🏷 Group", url=f"https://t.me/{SUPPORT_GROUP}"),
                     InlineKeyboardButton(
-                        "☕ Owner", url=f"https://t.me/{OWNER_USERNAME"),
+                        "☕ Owner", url=f"https://t.me/{OWNER_USERNAME}"),
                 ]
             ]
         ),
