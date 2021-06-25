@@ -91,7 +91,7 @@ f"""
  • /pmpermit [on/off] - enable/disable pesan pmpermit 
 *Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun
 
-◎› Owner Project: [Yunus Zend](https://t.me/ZendYNS)
+◎› Owner Project: [arie](https://t.me/SilenceSpe4ks)
 
 """
       ]
