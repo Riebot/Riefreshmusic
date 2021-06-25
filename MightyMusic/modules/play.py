@@ -530,7 +530,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton("Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu", callback_data="menu"),
-                    InlineKeyboardButton(text="Created", url=f"https://t.me/SilenceSpe4ks"),
+                    InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
                     InlineKeyboardButton(text="Channel", url=f"https://t.me/infobotmusik"),
@@ -574,7 +574,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton("Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu", callback_data="menu"),
-                    InlineKeyboardButton(text="Created", url=f"https://t.me/SilenceSpe4ks"),
+                    InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
                     InlineKeyboardButton(text="Channel Support", url=f"https://t.me/infobotmusik"),
@@ -842,7 +842,7 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    text="Updates Channel", url=f"https://t.me/{updateschannel}"
+                    text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
                 )
             ],
             [InlineKeyboardButton(text="🗑 Tutup", callback_data="cls")],
