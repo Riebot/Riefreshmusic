@@ -7,11 +7,11 @@ class Messages():
 f"""
 **Hy lagi kamu bertemu lagi dengan saya {PROJECT_NAME}
 
-⚪️ {PROJECT_NAME} bisa memutar musik baik itu di VC Group atau VC Channel
+🎶 {PROJECT_NAME} bisa memutar musik baik itu di VC Group atau VC Channel
 
-⚪️ Nama Asisten >> @{ASSISTANT_NAME}\n\nKlik tombol dibawah untuk melihat intruksi lain**
-◎› Owner Bot >> @{OWNER_USERNAME}
-◎› Owner Project >> @SilenceSpe4ks
+📼 Nama Asisten >> @{ASSISTANT_NAME}\n\nKlik tombol dibawah untuk melihat intruksi lain**
+🎸 Owner Bot >> @{OWNER_USERNAME}
+☕ Created By >> @SilenceSpe4ks
 """,
 
 f"""
@@ -29,7 +29,7 @@ f"""
 
 **Beberapa Command**
 
-**◎› Memainkan Lagu 🎧**
+**🎶 Memainkan Lagu 🎧**
 
 • /play <nama lagu> : putar lagu yang Anda minta
 • /play <url youtube> : Putar lagu melalui balasan url youtube
@@ -37,7 +37,7 @@ f"""
 • /dplay <nama lagu> : putar lagu yang Anda minta melalui deezer
 • /splay <nama lagu> : putar lagu yang Anda minta melalui jio saavn
 
-**◎› Playback ⏯**
+**🎶 Playback ⏯**
 
 • /player: buka panel pengaturan pemutar musik
 • /skip: putar lagu berikutnya
@@ -51,9 +51,9 @@ f"""
 """,
         
 f"""
-**◎› Putar Musik Di Channel 📮**
+**🎶 Putar Musik Di Channel 🎧**
 
-⚪️ Hanya untuk admin grup tertaut:
+🔔 Hanya untuk admin grup tertaut:
 
 • /cplay [song name] - putar lagu yang Anda minta
 • /cdplay [song name] - putar lagu yang Anda minta via deezer
@@ -69,7 +69,7 @@ f"""
 
 saluran Channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay )
 
-⚪️ Jika Anda tidak suka bermain di grup tertaut:
+🔔 Jika Anda tidak suka bermain di grup tertaut:
 
 1) Dapatkan ID saluran Anda.
 2) Buat grup dengan judul: Channel Music: your_channel_id
@@ -79,19 +79,19 @@ saluran Channel juga dapat digunakan sebagai pengganti c ( /cplay = /channelplay
 """,
 
 f"""
-**◎› More Info 📲**
+**🗒 More Info 📲**
 
 • /admincache: Memperbarui info admin grup Anda. Coba jika bot tidak mengenali admin
 • /userbotjoin: Undang @{ASSISTANT_NAME} Userbot ke obrolan Anda
 
-**◎› 📝 Command Khusus buat pengguna sudo**
+**🎶 📝 Command Khusus buat pengguna sudo**
 
  • /userbotleaveall - Keluarkan asisten musik dari semua obrolan chat
  • /gcast <reply to message> - global brodcast membalas pesan ke semua obrolan
  • /pmpermit [on/off] - enable/disable pesan pmpermit 
 *Pengguna Sudo dapat menjalankan perintah apa pun di grup mana pun
 
-◎› Owner Project: [arie](https://t.me/SilenceSpe4ks)
+☕ Owner Project: [arie](https://t.me/SilenceSpe4ks)
 
 """
       ]
