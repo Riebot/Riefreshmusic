@@ -13,7 +13,6 @@ ydl_opts = {
 }
 
 ydl = YoutubeDL(ydl_opts)
-https://yt-dl.org/update
 
 def download(url: str) -> str:
     info = ydl.extract_info(url, False)
