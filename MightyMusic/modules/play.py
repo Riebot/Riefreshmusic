@@ -49,7 +49,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("Anda tidak diizinkan!", show_alert=True)
+            await cb.answer("Kamu tidak diizinkan!", show_alert=True)
             return
 
     return decorator
@@ -130,9 +130,9 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style="md")
-    msg = "**Sekarang Dimainkan** di {}".format(message.chat.title)
-    msg += "\n◎› " + now_playing
-    msg += "\n◎› Request dari " + by
+    msg = "**Sedang Memutar Lagu⏸** di {}".format(message.chat.title)
+    msg += "\n⏸ " + now_playing
+    msg += "\n🎙 Request dari " + by
     temp.pop(0)
     if temp:
         msg += "\n\n"
@@ -140,8 +140,8 @@ async def playlist(client, message):
         for song in temp:
             name = song[0]
             usr = song[1].mention(style="md")
-            msg += f"\n◎› {name}"
-            msg += f"\n◎› Request dari {usr}\n"
+            msg += f"\n🎶 {name}"
+            msg += f"\n🎙 Request dari {usr}\n"
     await message.reply_text(msg)
 
 
@@ -231,18 +231,18 @@ async def p_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Sekarang dimainkan** di {}".format(cb.message.chat.title)
-        msg += "\n◎› " + now_playing
-        msg += "\n◎› Req dari " + by
+        msg = "**Sedang Memutar lagu⏸** di {}".format(cb.message.chat.title)
+        msg += "\n⏸ " + now_playing
+        msg += "\n🎙 Req dari " + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
-            msg += "**Dalam Antrian**"
+            msg += "**Lagu Dalam Antrian**"
             for song in temp:
                 name = song[0]
                 usr = song[1].mention(style="md")
-                msg += f"\n◎› {name}"
-                msg += f"\n◎› Req dari {usr}\n"
+                msg += f"\n➡ {name}"
+                msg += f"\n🎙 Req dari {usr}\n"
         await cb.message.edit(msg)
 
 
@@ -299,18 +299,18 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Sekarang dimainkan** di {}".format(cb.message.chat.title)
-        msg += "\n◎› " + now_playing
-        msg += "\n◎› Req dari " + by
+        msg = "**Sedang memutar lagu** di {}".format(cb.message.chat.title)
+        msg += "\n⏸ " + now_playing
+        msg += "\n🎙 Req dari " + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
-            msg += "**Dalam Antrian**"
+            msg += "**Lagu Dalam Antrian**"
             for song in temp:
                 name = song[0]
                 usr = song[1].mention(style="md")
-                msg += f"\n◎› {name}"
-                msg += f"\n◎› Req dari {usr}\n"
+                msg += f"\n➡ {name}"
+                msg += f"\n➡ Req dari {usr}\n"
         await cb.message.edit(msg)
 
     elif type_ == "resume":
@@ -502,7 +502,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Sedang Memproses**")
+        await lel.edit("🎵 **Sedang Memproses Lagu..Sabarrr..**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -519,7 +519,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "Lagu tidak ditemukan. Coba lagu lain atau mungkin mengejanya dengan benar."
+                "Lagu tidak ditemukan. Coba cari lagu lain atau ketik nama artis dan judul lagu dengan benar."
             )
             print(str(e))
             return
@@ -546,7 +546,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Memproses Lagu**")
+        await lel.edit("🎵 **Sedang Memproses Lagu..Sabarrr..**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -563,7 +563,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "Lagu tidak ditemukan.Coba eja dengan benar atau cari lagu lain."
+                "Lagu tidak ditemukan.Coba ketik dengan benar atau cari lagu lain."
             )
             print(str(e))
             return
@@ -577,7 +577,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton(text="Owner", url=f"https://t.me/{own}"),
                 ],
                 [
-                    InlineKeyboardButton(text="Channel Support", url=f"https://t.me/infobotmusik"),
+                    InlineKeyboardButton(text="Channel", url=f"https://t.me/infobotmusik"),
                     InlineKeyboardButton(text="Tutup", callback_data="cls")
                 ],
             ]
@@ -597,8 +597,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎧 **Request Dari: **{requested_by}".format(
+            caption = f"🎶 **Judul:** [{title[:23]}]({url})\n⏳ **Durasi:** {duration}\n📌 **Status:** Antrian Ke `{position}`\n" \
+                    + f"🎙 **Request Dari: **{requested_by}".format(
         message.from_user.mention()
         ),    
     )
@@ -621,8 +621,8 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption = f"🏷 **Judul:** [{title[:23]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang dimainkan\n" \
-                    + f"🎧 **Request Dari: **{requested_by}".format(
+            caption = f"🎶 **Judul:** [{title[:23]}]({url})\n⏳ **Durasi:** {duration}\n📌 **Status:** Sedang dimainkan\n" \
+                    + f"🎙 **Request Dari: **{requested_by}".format(
         message.from_user.mention()
         ),
     )
@@ -692,7 +692,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     query = queryy
     res = lel
-    await res.edit(f"Sedang mencari 👀👀👀 dari `{queryy}` dalam deezer")
+    await res.edit(f"Sedang mencari 🔍.... dari `{queryy}` dalam deezer")
     try:
         songs = await arq.deezer(query,1)
         if not songs.ok:
@@ -761,7 +761,7 @@ async def deezer(client: Client, message_: Message):
 @Client.on_message(filters.command("splay") & filters.group & ~filters.edited)
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Memproses Lagu**")
+    lel = await message_.reply("🔄 **Sedang Memproses Lagu..Sabarrr..**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -819,7 +819,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Sedang mencari 👀👀👀 dari `{query}` dalam jio saavn")
+    await res.edit(f"Sedang mencari 🔍.... dari `{query}` dalam jio saavn")
     try:
         songs = await arq.saavn(query)
         if not songs.ok:
