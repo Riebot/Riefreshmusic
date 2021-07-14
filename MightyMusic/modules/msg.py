@@ -1,7 +1,7 @@
 import os
 from MightyMusic.config import ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,OWNER_USERNAME
 class Messages():
-      START_MSG = "**Hayyy 👋** [{}](tg://user?id={}) \n━━━━━━━━━━━━━━━━━━━━━━━━\n🎙 Saya adalah bot musik yang di kelola oleh @(OWNER_USERNAME) untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help di bawah untuk mendapatkan info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n📻 Selamat menikmati dan mendengarkan musik di Voice call GROUP/ CHANNEL kamu."
+      START_MSG = "**Hayyy 👋** [{}](tg://user?id={}) \n━━━━━━━━━━━━━━━━━━━━━━━━\n🎙 Saya adalah bot musik yang di kelola oleh arii untuk memutar musik di obrolan suara Grup & Saluran Channel Telegram.\n\n📝 Ketik /help di bawah untuk mendapatkan info dari saya.\n━━━━━━━━━━━━━━━━━━━━━━━━\n📻 Selamat menikmati dan mendengarkan musik di Voice call GROUP/ CHANNEL kamu."
       HELP_MSG = [
         ".",
 f"""
